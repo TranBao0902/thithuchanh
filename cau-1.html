@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let diemthi=[100,84,78,99,98,100,68,73,77,67]
+    let ketqua = 0;
+    function diemthicaothu3() {
+        for (let i =0; i<diemthi.length; i++){
+            for (let j = i+1; j<diemthi.length; j++){
+                if(diemthi[i] > diemthi[j]){
+                    ketqua = diemthi[j];
+                    diemthi[j] = diemthi[i];
+                    diemthi[i] = ketqua;
+                }
+            }
+        }
+        let diemcaothu3 = diemthi[diemthi.length-3]
+        return diemcaothu3
+    }
+    let diem = diemthicaothu3();
+    document.write("điểm thi cao thứ 3 là:" +ketqua)
+</script>
+</body>
+</html>
